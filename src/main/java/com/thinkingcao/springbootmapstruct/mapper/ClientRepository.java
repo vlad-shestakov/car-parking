@@ -7,5 +7,4 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "client", path = "client")
 public interface ClientRepository extends JpaRepository<ClientEntity, Integer> {
-
 }

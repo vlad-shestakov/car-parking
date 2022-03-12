@@ -6,5 +6,4 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "parkspace", path = "parkspace")
 public interface ParkspaceRepository extends JpaRepository<ParkspaceEntity, Integer> {
-
 }

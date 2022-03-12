@@ -1,5 +1,7 @@
 package com.thinkingcao.springbootmapstruct.controller;
 
+import com.thinkingcao.springbootmapstruct.entity.ParkspaceEntity;
+import com.thinkingcao.springbootmapstruct.mapper.ParkspaceRepository;
 import com.thinkingcao.springbootmapstruct.vo.ClientVo;
 import com.thinkingcao.springbootmapstruct.entity.ClientEntity;
 //import com.thinkingcao.springbootmapstruct.entity.Order;
@@ -21,8 +23,8 @@ public class ClientController {
     @Autowired
     private ClientRepository clientRepository;
 
-//    @Autowired
-//    private OrdersRepository ordersRepository;
+    @Autowired
+    private ParkspaceRepository parkspaceRepository;
 
     @Autowired
     private ClientMapper clientMapper;
@@ -30,17 +32,14 @@ public class ClientController {
     @RequestMapping(value = "/detail/{clientid}", method = RequestMethod.GET)
     public ClientVo details(@PathVariable(value = "clientid") Integer clientid) {
 
+
         ClientEntity clientInfo = clientRepository.findById(clientid).get();
-//        Optional<Order> optionalT = ordersRepository.findById(clientId);
-//        Order order = optionalT.isPresent() ? optionalT.get() : null;
-//        return clientMapper.fromGoodOrderDTO(goodInfo, order);
-        return clientMapper.fromClientsDTO(clientInfo);
 
+        Optional<ParkspaceEntity> optionalT = parkspaceRepository.findById(clientid);
 
-//        Good goodInfo = goodsRepository.findById(goodId).get();
-//        Optional<Order> optionalT = ordersRepository.findById(goodId);
-//        Order order = optionalT.isPresent() ? optionalT.get() : null;
-//        return goodOrderMapper.fromGoodOrderDTO(goodInfo, order);
+        ParkspaceEntity parkspaceInfo = optionalT.isPresent() ? optionalT.get() : null;
+
+        return clientMapper.fromClientsDTO(clientInfo, parkspaceInfo);
     }
 }
 

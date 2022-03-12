@@ -2,13 +2,13 @@ package com.thinkingcao.springbootmapstruct.vo;
 
 import lombok.Data;
 
+import javax.persistence.Column;
+
 @Data
 public class ClientVo {
 
-    private int clientid;
-    private String licensenumber;
-//    private int payState;     // Статус платежа
-//    private String goodType;  // Категория товара
-//    private String goodName;  // Название товара
+    private int clientid;           // Код клиента-машины
+    private String licensenumber;   // Номер авто
+    private int parkspacenum;       // Номер парковочного места
 
 }

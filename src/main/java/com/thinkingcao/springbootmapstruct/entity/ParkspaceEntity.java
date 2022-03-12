@@ -5,21 +5,22 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Entity
 @Table(name = "PARKSPACE")
-public class ParkspaceEntity {
+public class ParkspaceEntity{
 
     @Id
-    @Column(name ="parkspaceid",columnDefinition = "int(100) COMMENT 'Идентификатор парковки'")
-    @GeneratedValue(strategy = GenerationType.AUTO)        // Первичный ключ автоматически увеличивается
+    @Column(name ="clientid",columnDefinition = "int(100) COMMENT 'Идентификатор клиента'")
+//    @GeneratedValue(strategy = GenerationType.AUTO)        // Первичный ключ автоматически увеличивается
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int parkspaceid;
+    private int clientid;
 
     @Column
-    private Long clientid;
+    private int parkspacenum;
 
 }
