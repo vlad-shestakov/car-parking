@@ -10,13 +10,22 @@ class SpringbootMapstructApplicationTests {
     void contextLoads() {
         /*
         * Test Goods
-        * http://127.0.0.1:8080/goodOrder/detail/111111
+        * http://localhost:8080/goodOrder/detail/111111
         *
         * Test Clients Mappings
-        * http://127.0.0.1:8080/client/detail/801
+        * http://localhost:8080/client/detail/801
         *
         * Test Clients all
-        * http://127.0.0.1:8080/client
+        * http://localhost:8080/client
+        *
+        * Test Clients one
+        * http://localhost:8080/client/801
+        *
+        * Test parkspace all
+        * http://localhost:8080/parkspace"
+        *
+        * Test parkspace one
+        * http://localhost:8080/parkspace/1"
         * */
     }
 
