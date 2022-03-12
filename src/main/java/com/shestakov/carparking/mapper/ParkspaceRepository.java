@@ -1,6 +1,6 @@
-package com.thinkingcao.springbootmapstruct.mapper;
+package com.shestakov.carparking.mapper;
 
-import com.thinkingcao.springbootmapstruct.entity.ParkspaceEntity;
+import com.shestakov.carparking.entity.ParkspaceEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

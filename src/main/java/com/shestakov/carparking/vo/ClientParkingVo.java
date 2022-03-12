@@ -1,4 +1,4 @@
-package com.thinkingcao.springbootmapstruct.vo;
+package com.shestakov.carparking.vo;
 
 import lombok.Data;
 import java.util.Date;

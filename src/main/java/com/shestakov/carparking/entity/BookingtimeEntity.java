@@ -1,4 +1,4 @@
-package com.thinkingcao.springbootmapstruct.entity;
+package com.shestakov.carparking.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

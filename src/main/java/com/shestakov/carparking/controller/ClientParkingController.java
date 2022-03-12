@@ -1,13 +1,13 @@
-package com.thinkingcao.springbootmapstruct.controller;
+package com.shestakov.carparking.controller;
 
-import com.thinkingcao.springbootmapstruct.entity.BookingtimeEntity;
-import com.thinkingcao.springbootmapstruct.entity.ParkspaceEntity;
-import com.thinkingcao.springbootmapstruct.mapper.ParkspaceRepository;
-import com.thinkingcao.springbootmapstruct.mapper.BookingtimeRepository;
-import com.thinkingcao.springbootmapstruct.vo.ClientParkingVo;
-import com.thinkingcao.springbootmapstruct.entity.ClientEntity;
-import com.thinkingcao.springbootmapstruct.inter.ClientParkingMapper;
-import com.thinkingcao.springbootmapstruct.mapper.ClientRepository;
+import com.shestakov.carparking.entity.BookingtimeEntity;
+import com.shestakov.carparking.entity.ClientEntity;
+import com.shestakov.carparking.entity.ParkspaceEntity;
+import com.shestakov.carparking.inter.ClientParkingMapper;
+import com.shestakov.carparking.mapper.BookingtimeRepository;
+import com.shestakov.carparking.mapper.ClientRepository;
+import com.shestakov.carparking.mapper.ParkspaceRepository;
+import com.shestakov.carparking.vo.ClientParkingVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

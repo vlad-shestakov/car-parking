@@ -1,10 +1,12 @@
-package com.thinkingcao.springbootmapstruct;
+package com.shestakov.carparking;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+@Disabled
 @SpringBootTest
-class SpringbootMapstructApplicationTests {
+class CarParkingApplicationTests {
 
     @Test
     void contextLoads() {
