@@ -13,9 +13,9 @@ class SpringbootMapstructApplicationTests {
         * http://localhost:8080/goodOrder/detail/111111
         *
         * Test Clients Mappings
-        * http://localhost:8080/client/detail/801
+        * http://localhost:8080/clientParking/detail/801
         *
-        * 
+        *
         * Test Clients all
         * http://localhost:8080/client
         *

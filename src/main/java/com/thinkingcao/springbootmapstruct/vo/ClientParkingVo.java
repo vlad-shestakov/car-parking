@@ -4,7 +4,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class ClientVo {
+public class ClientParkingVo {
 
     private int clientid;           // Код клиента-машины
     private String licensenumber;   // Номер авто

@@ -4,13 +4,10 @@ import com.thinkingcao.springbootmapstruct.entity.BookingtimeEntity;
 import com.thinkingcao.springbootmapstruct.entity.ParkspaceEntity;
 import com.thinkingcao.springbootmapstruct.mapper.ParkspaceRepository;
 import com.thinkingcao.springbootmapstruct.mapper.BookingtimeRepository;
-import com.thinkingcao.springbootmapstruct.vo.ClientVo;
+import com.thinkingcao.springbootmapstruct.vo.ClientParkingVo;
 import com.thinkingcao.springbootmapstruct.entity.ClientEntity;
-//import com.thinkingcao.springbootmapstruct.entity.Order;
-import com.thinkingcao.springbootmapstruct.inter.ClientMapper;
+import com.thinkingcao.springbootmapstruct.inter.ClientParkingMapper;
 import com.thinkingcao.springbootmapstruct.mapper.ClientRepository;
-import com.thinkingcao.springbootmapstruct.mapper.ClientRepository;
-//import com.thinkingcao.springbootmapstruct.mapper.OrdersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/client")
-public class ClientController {
+@RequestMapping("/clientParking")
+public class ClientParkingController {
 
     @Autowired
     private ClientRepository clientRepository;
@@ -33,10 +30,10 @@ public class ClientController {
     private BookingtimeRepository bookingtimeRepository;
 
     @Autowired
-    private ClientMapper clientMapper;
+    private ClientParkingMapper clientParkingMapper;
 
     @RequestMapping(value = "/detail/{clientid}", method = RequestMethod.GET)
-    public ClientVo details(@PathVariable(value = "clientid") Integer clientid) {
+    public ClientParkingVo details(@PathVariable(value = "clientid") Integer clientid) {
 
 
         ClientEntity clientInfo = clientRepository.findById(clientid).get();
@@ -48,7 +45,7 @@ public class ClientController {
         BookingtimeEntity bookingtimeInfo = optionalB.isPresent() ? optionalB.get() : null;
 
 
-        return clientMapper.fromClientsDTO(clientInfo, parkspaceInfo, bookingtimeInfo);
+        return clientParkingMapper.fromClientParkingDTO(clientInfo, parkspaceInfo, bookingtimeInfo);
     }
 }
 

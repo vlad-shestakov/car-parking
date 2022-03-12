@@ -2,7 +2,7 @@ package com.thinkingcao.springbootmapstruct.inter;
 
 
 import com.thinkingcao.springbootmapstruct.entity.BookingtimeEntity;
-import com.thinkingcao.springbootmapstruct.vo.ClientVo;
+import com.thinkingcao.springbootmapstruct.vo.ClientParkingVo;
 import com.thinkingcao.springbootmapstruct.entity.ClientEntity;
 import com.thinkingcao.springbootmapstruct.entity.ParkspaceEntity;
 import org.mapstruct.Mapper;
@@ -12,7 +12,7 @@ import org.mapstruct.Mappings;
 import java.util.Date;
 
 @Mapper(componentModel = "spring")
-public interface ClientMapper {
+public interface ClientParkingMapper {
     @Mappings({
             @Mapping(source = "client.clientid", target = "clientid"),
             @Mapping(source = "client.licensenumber",target = "licensenumber"),
@@ -25,5 +25,5 @@ public interface ClientMapper {
             @Mapping(source = "bookingtime.ispaid",target = "ispaid")
     })
 
-    ClientVo fromClientsDTO(ClientEntity client, ParkspaceEntity parkspace, BookingtimeEntity bookingtime);
+    ClientParkingVo fromClientParkingDTO(ClientEntity client, ParkspaceEntity parkspace, BookingtimeEntity bookingtime);
 }
