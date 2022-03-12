@@ -5,9 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 /**
- * <pre>
- * @desc: Репозиторий парковочных мест
- * </pre>
+ * Репозиторий парковочных мест
  */
 @RepositoryRestResource(collectionResourceRel = "parkspace", path = "parkspace")
 public interface ParkspaceRepository extends JpaRepository<ParkspaceEntity, Integer> {

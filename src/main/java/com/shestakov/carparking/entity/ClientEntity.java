@@ -3,30 +3,40 @@ package com.shestakov.carparking.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.Set;
 
+import java.io.Serializable;
 import javax.persistence.*;
 
 /**
- * <pre>
- * @desc: Клиенты-машины
- * </pre>
+ * Клиенты-машины
  */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Entity
 @Table(name="CLIENT")
-public class ClientEntity {
+public class ClientEntity implements Serializable {
 
     @Id
-//    @Column(name ="clientid",columnDefinition = "int(100) COMMENT 'Идентификатор клиента'")
     @Column(name ="clientid")
     @GeneratedValue(strategy = GenerationType.AUTO)        // Первичный ключ автоматически увеличивается
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)   // Автозаполнение для MySQL
     private int clientid;
 
-//    @Column(name = "licensenumber",columnDefinition = "varchar(100) COMMENT 'licensenumber'")
     @Column(name = "licensenumber")
     private String licensenumber;
+
+//    @OneToMany(mappedBy = "ClientEntity", cascade = CascadeType.REMOVE, orphanRemoval = true)
+//    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private List<ParkspaceEntity> parkspaces = new ArrayList<>();
+
+//    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    private Set<ParkspaceEntity> parkspaces;
+
+    @OneToOne(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private ParkspaceEntity parkspace;
+
+    @OneToOne(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private BookingtimeEntity bookingtime;
 
 }
