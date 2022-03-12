@@ -7,6 +7,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 
+/**
+ * <pre>
+ * @desc: Парковочные места
+ * </pre>
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -15,9 +20,8 @@ import java.io.Serializable;
 public class ParkspaceEntity{
 
     @Id
-    @Column(name ="clientid",columnDefinition = "int(100) COMMENT 'Идентификатор клиента'")
-//    @GeneratedValue(strategy = GenerationType.AUTO)        // Первичный ключ автоматически увеличивается
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name ="clientid",columnDefinition = "int(100) COMMENT 'Идентификатор клиента'")
+    @Column(name ="clientid")
     private int clientid;
 
     @Column

@@ -10,6 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
+/**
+ * <pre>
+ * @desc: Бронирования
+ * </pre>
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data

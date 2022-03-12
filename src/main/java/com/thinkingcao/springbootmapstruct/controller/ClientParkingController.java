@@ -16,6 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
 
+/**
+ * <pre>
+ * @desc: Контроллер для управления парковкой
+ * </pre>
+ */
 @RestController
 @RequestMapping("/clientParking")
 public class ClientParkingController {

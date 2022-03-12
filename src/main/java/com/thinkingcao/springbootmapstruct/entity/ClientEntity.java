@@ -6,6 +6,11 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * <pre>
+ * @desc: Клиенты-машины
+ * </pre>
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -14,13 +19,14 @@ import javax.persistence.*;
 public class ClientEntity {
 
     @Id
-    @Column(name ="clientid",columnDefinition = "int(100) COMMENT 'Идентификатор клиента'")
+//    @Column(name ="clientid",columnDefinition = "int(100) COMMENT 'Идентификатор клиента'")
+    @Column(name ="clientid")
     @GeneratedValue(strategy = GenerationType.AUTO)        // Первичный ключ автоматически увеличивается
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)   // Автозаполнение для MySQL
     private int clientid;
 
-    @Column(name = "licensenumber",columnDefinition = "varchar(100) COMMENT 'licensenumber'")
-//    @Column(name = "licensenumber")
+//    @Column(name = "licensenumber",columnDefinition = "varchar(100) COMMENT 'licensenumber'")
+    @Column(name = "licensenumber")
     private String licensenumber;
 
 }

@@ -11,6 +11,11 @@ import org.mapstruct.Mappings;
 
 import java.util.Date;
 
+/**
+ * <pre>
+ * @desc: Маппер полей для управления парковкой
+ * </pre>
+ */
 @Mapper(componentModel = "spring")
 public interface ClientParkingMapper {
     @Mappings({
