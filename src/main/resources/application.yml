@@ -1,27 +1,23 @@
-
 ### Среда разработки
+
 ## Конфигурация порта
 server:
   port: 8080
 spring:
   datasource: ## Конфигурация базы данных
-#    url: jdbc:mysql://localhost:3306/springboot-mapstruct?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
     url: jdbc:h2:mem:mapstruct
-#    driver-class-name: com.mysql.jdbc.Driver
     driver-class-name: org.h2.Driver
-#    username: root
     username: admin
-#    password: 1234567
     password: admin
   h2:
     console:
       enabled: true
 
   jpa:
-    database: MYSQL  # Тип базы данных
+    database: h2  # Тип базы данных
     show-sql: true   # Печать оператора SQL
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
-      dialect: org.hibernate.dialect.MySQL5Dialect
+      dialect: org.hibernate.dialect.H2Dialect

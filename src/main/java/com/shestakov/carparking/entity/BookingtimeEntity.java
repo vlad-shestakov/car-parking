@@ -1,4 +1,4 @@
-package com.thinkingcao.springbootmapstruct.entity;
+package com.shestakov.carparking.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,6 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
+/**
+ * <pre>
+ * @desc: Бронирования
+ * </pre>
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
