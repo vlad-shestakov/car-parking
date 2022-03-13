@@ -1,6 +1,6 @@
-package com.shestakov.carparking.mapper;
+package com.shestakov.carparking.database.repository;
 
-import com.shestakov.carparking.entity.ClientEntity;
+import com.shestakov.carparking.database.model.ClientEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

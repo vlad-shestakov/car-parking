@@ -1,18 +1,16 @@
-package com.shestakov.carparking.inter;
+package com.shestakov.carparking.controller.mapper;
 
 
-import com.shestakov.carparking.entity.BookingtimeEntity;
-import com.shestakov.carparking.entity.ClientEntity;
-import com.shestakov.carparking.entity.ParkspaceEntity;
-import com.shestakov.carparking.vo.ClientParkingVo;
+import com.shestakov.carparking.database.model.BookingtimeEntity;
+import com.shestakov.carparking.database.model.ClientEntity;
+import com.shestakov.carparking.database.model.ParkspaceEntity;
+import com.shestakov.carparking.controller.model.ClientParkingDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
 /**
- * <pre>
- * @desc: Маппер полей для управления парковкой
- * </pre>
+ * <Маппер полей для управления парковкой
  */
 @Mapper(componentModel = "spring")
 public interface ClientParkingMapper {
@@ -27,5 +25,5 @@ public interface ClientParkingMapper {
             @Mapping(source = "bookingtime.payedsum",target = "payedsum"),
             @Mapping(source = "bookingtime.ispaid",target = "ispaid")
     })
-    ClientParkingVo fromClientParkingDTO(ClientEntity client, ParkspaceEntity parkspace, BookingtimeEntity bookingtime);
+    ClientParkingDTO fromClientParkingDTO(ClientEntity client, ParkspaceEntity parkspace, BookingtimeEntity bookingtime);
 }
