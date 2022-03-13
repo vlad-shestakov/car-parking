@@ -1,13 +1,13 @@
-package com.shestakov.carparking;
+package com.shestakov.parkservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CarParkingApplication {
+public class ParkServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CarParkingApplication.class, args);
+        SpringApplication.run(ParkServiceApplication.class, args);
     }
 
 }

@@ -1,13 +1,13 @@
-package com.shestakov.carparking.controller;
+package com.shestakov.parkservice.controller;
 
-import com.shestakov.carparking.entity.BookingtimeEntity;
-import com.shestakov.carparking.entity.ClientEntity;
-import com.shestakov.carparking.entity.ParkspaceEntity;
-import com.shestakov.carparking.inter.ClientParkingMapper;
-import com.shestakov.carparking.mapper.BookingtimeRepository;
-import com.shestakov.carparking.mapper.ClientRepository;
-import com.shestakov.carparking.mapper.ParkspaceRepository;
-import com.shestakov.carparking.vo.ClientParkingVo;
+import com.shestakov.parkservice.controller.mapper.ClientDtoMapper;
+import com.shestakov.parkservice.controller.model.ClientDto;
+import com.shestakov.parkservice.database.model.BookingtimeEntity;
+import com.shestakov.parkservice.database.model.ClientEntity;
+import com.shestakov.parkservice.database.model.ParkspaceEntity;
+import com.shestakov.parkservice.database.repository.BookingtimeRepository;
+import com.shestakov.parkservice.database.repository.ClientRepository;
+import com.shestakov.parkservice.database.repository.ParkspaceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,12 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
 
 /**
- * <pre>
- * @desc: Контроллер для управления парковкой
- * </pre>
+ * Контроллер для управления парковкой
  */
 @RestController
-@RequestMapping("/clientParking")
+@RequestMapping("/parkservice")
 public class ClientParkingController {
 
     @Autowired
@@ -35,10 +33,10 @@ public class ClientParkingController {
     private BookingtimeRepository bookingtimeRepository;
 
     @Autowired
-    private ClientParkingMapper clientParkingMapper;
+    private ClientDtoMapper clientDtoMapper;
 
     @RequestMapping(value = "/detail/{clientid}", method = RequestMethod.GET)
-    public ClientParkingVo details(@PathVariable(value = "clientid") Integer clientid) {
+    public ClientDto details(@PathVariable(value = "clientid") Integer clientid) {
 
 
         ClientEntity clientInfo = clientRepository.findById(clientid).get();
@@ -50,7 +48,7 @@ public class ClientParkingController {
         BookingtimeEntity bookingtimeInfo = optionalB.isPresent() ? optionalB.get() : null;
 
 
-        return clientParkingMapper.fromClientParkingDTO(clientInfo, parkspaceInfo, bookingtimeInfo);
+        return clientDtoMapper.fromClientParkingDTO(clientInfo, parkspaceInfo, bookingtimeInfo);
     }
 }
 
