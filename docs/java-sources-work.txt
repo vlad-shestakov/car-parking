@@ -1,5 +1,7 @@
 java-sources-work.txt
 
+-- Изученные материалы
+
 ---------------------------------------------------------
 -- REST
 
@@ -9,7 +11,7 @@ java-sources-work.txt
 	GET
 	DELETE
 
-Разница между PUT и POST
+-- Разница между PUT и POST
 	https://www.andreyolegovich.ru/PC/web/post_put.php
 	https://editor.swagger.io/
 	
@@ -19,8 +21,9 @@ java-sources-work.txt
 	add spring web
 
 ---------------------------------------------------------
-Swagger (software)
+-- Swagger (software)
 	https://en.wikipedia.org/wiki/Swagger_(software)
+	
 ---------------------------------------------------------
 -- Flyway (software)
 	https://en.wikipedia.org/wiki/Flyway_(software)
@@ -50,7 +53,9 @@ C:\Users\User\.h2
 remote
 	jdbc:h2:tcp://{host::localhost}[:{port::9092}]/{database::default}[;<;,user={user:param},password={password:param},{:identifier}={:param}>]
 
-
+-- Spring Boot: создание и удаление JPA баз данных
+	https://java-ru-blog.blogspot.com/2020/03/spring-boot-jpa-create-drop-databases.html
+	
 ---------------------------------------------------------
 -- Чистая архитектура (Роберта К. Мартина) / The Clean Architecture
 	https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
@@ -71,8 +76,7 @@ remote
 	автор пропагандирует идею независимости (или минимизации зависимости) архитектуры приложения от внешних факторов: фреймворков, баз данных и прочих сторонних зависимостей
 
 ----------------------------------------------------------
-CheckStyle
-MapStruct - конвертация типов между
+-- CheckStyle
 lom
 
 ---------------------------------------------------------
@@ -100,7 +104,8 @@ lom
 	https://github.com/tiagoamp/microservices-series/tree/ch-01
 
 ---------------------------------------------------------
--- JPA ENTITIES / domains/ Работа с сущностями 
+-- ENTITIES / domain object / Работа с сущностями 
+	https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82
 
 -- Spring Data JPA One To Many Relationship Mapping Example
 	https://github.com/attacomsian/code-examples/tree/master/spring-data-jpa/jpa-mappings
@@ -128,11 +133,37 @@ lom
 	@Enumerated(EnumType.STRING) / EnumType.ORDINAL
 	
 ---------------------------------------------------------
+-- Объекты значения / Value Object / VO
+
+-- Entity vs Value Object (DDD)
+	https://habr.com/ru/post/275599/
+	
+---------------------------------------------------------
+--  DAO / data access object / абстрактный интерфейс к какому-либо типу базы данных
+	https://ru.wikipedia.org/wiki/Data_Access_Object
+	
+---------------------------------------------------------
+-- Lombok 
+
+-- Lombok возвращает величие Java
+	@Data 
+	@Value 		- объект без сеттеров. Неизменяемый
+	@Builder
+	@NonNull
+	@Singular	@Wither 	@Accessors 
+	https://habr.com/ru/post/438870/
+---------------------------------------------------------
 -- Работа с репозиториями
 -- Difference Between CrudRepository and JPARepository in Java
 	https://www.tutorialspoint.com/difference-between-crudrepository-and-jparepository-in-java#:~:text=Crud%20Repository%20is%20the%20base,acts%20as%20a%20marker%20interface.&text=JPA%20also%20provides%20some%20extra,like%20findOne%2C%20saves%2C%20etc.&text=JPA%20repository%20also%20extends%20the%20PagingAndSorting%20repository.
 	
 ---------------------------------------------------------
+-- DTO - Data Transfer Object
+	https://ru.wikipedia.org/wiki/DTO
+
+-- Переосмысление DTO в Java [NR]
+	https://habr.com/ru/post/513072/
+	
 ---------------------------------------------------------
 -- MapStruct
 	https://mapstruct.org/
@@ -151,7 +182,8 @@ lom
 	https://itnan.ru/post.php?c=1&p=433270
 	https://github.com/developerc/mapstructexerciss6
 
--- Серия учебных пособий SpringBoot (55): SpringBoot интегрирует MapStruct для автоматического сопоставления DTO
+-- Серия учебных пособий SpringBoot (55): SpringBoot интегрирует 
+-- MapStruct для автоматического сопоставления DTO
 	https://russianblogs.com/article/54181583003/
 	https://github.com/Thinkingcao/SpringBootLearning/tree/master/springboot-mapstruct
 ---------------------------------------------------------
@@ -176,14 +208,11 @@ lom
 Unit тестирование с JUnit
 	https://devcolibri.com/unit-%d1%82%d0%b5%d1%81%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d1%81-junit/
 ---------------------------------------------------------
-Eureka / aka Eureka Server также известен как Discovery Server.
+-- Eureka / aka Eureka Server также известен как Discovery Server.
 
 Spring Cloud Netflix: Eureka
 	https://medium.com/@kirill.sereda/spring-cloud-netflix-eureka-%D0%BF%D0%BE-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8-5b7829481717
 
----------------------------------------------------------
-sd0183276287
-657281
 ---------------------------------------------------------
 -- Test with curl
 
