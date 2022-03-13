@@ -1,7 +1,7 @@
 package com.shestakov.parkservice.controller;
 
-import com.shestakov.parkservice.controller.mapper.ClientDtoMapper;
-import com.shestakov.parkservice.controller.model.ClientDto;
+import com.shestakov.parkservice.controller.mapper.ParkserviceDtoMapper;
+import com.shestakov.parkservice.controller.model.ParkserviceDto;
 import com.shestakov.parkservice.database.model.BookingtimeEntity;
 import com.shestakov.parkservice.database.model.ClientEntity;
 import com.shestakov.parkservice.database.model.ParkspaceEntity;
@@ -21,7 +21,7 @@ import java.util.Optional;
  */
 @RestController
 @RequestMapping("/parkservice")
-public class ClientParkingController {
+public class ParkserviceController {
 
     @Autowired
     private ClientRepository clientRepository;
@@ -33,10 +33,10 @@ public class ClientParkingController {
     private BookingtimeRepository bookingtimeRepository;
 
     @Autowired
-    private ClientDtoMapper clientDtoMapper;
+    private ParkserviceDtoMapper parkserviceDtoMapper;
 
     @RequestMapping(value = "/detail/{clientid}", method = RequestMethod.GET)
-    public ClientDto details(@PathVariable(value = "clientid") Integer clientid) {
+    public ParkserviceDto details(@PathVariable(value = "clientid") Integer clientid) {
 
 
         ClientEntity clientInfo = clientRepository.findById(clientid).get();
@@ -48,7 +48,7 @@ public class ClientParkingController {
         BookingtimeEntity bookingtimeInfo = optionalB.isPresent() ? optionalB.get() : null;
 
 
-        return clientDtoMapper.fromClientParkingDTO(clientInfo, parkspaceInfo, bookingtimeInfo);
+        return parkserviceDtoMapper.fromClientParkingDTO(clientInfo, parkspaceInfo, bookingtimeInfo);
     }
 }
 
