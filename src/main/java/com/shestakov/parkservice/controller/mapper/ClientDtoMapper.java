@@ -1,7 +1,7 @@
 package com.shestakov.parkservice.controller.mapper;
 
 
-import com.shestakov.parkservice.controller.model.ParkserviceDto;
+import com.shestakov.parkservice.controller.model.ClientDto;
 import com.shestakov.parkservice.database.model.BookingtimeEntity;
 import com.shestakov.parkservice.database.model.ClientEntity;
 import com.shestakov.parkservice.database.model.ParkspaceEntity;
@@ -13,7 +13,7 @@ import org.mapstruct.Mappings;
  * <Маппер полей для управления парковкой
  */
 @Mapper(componentModel = "spring")
-public interface ParkserviceDtoMapper {
+public interface ClientDtoMapper {
     @Mappings({
             @Mapping(source = "client.clientid", target = "clientid"),
             @Mapping(source = "client.licensenumber",target = "licensenumber"),
@@ -25,5 +25,5 @@ public interface ParkserviceDtoMapper {
             @Mapping(source = "bookingtime.payedsum",target = "payedsum"),
             @Mapping(source = "bookingtime.ispaid",target = "ispaid")
     })
-    ParkserviceDto fromParkserviceDTO(ClientEntity client, ParkspaceEntity parkspace, BookingtimeEntity bookingtime);
+    ClientDto fromClientDTO(ClientEntity client, ParkspaceEntity parkspace, BookingtimeEntity bookingtime);
 }

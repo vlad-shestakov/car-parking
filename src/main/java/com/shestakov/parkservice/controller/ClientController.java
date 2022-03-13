@@ -20,8 +20,8 @@ import java.util.Optional;
  * Контроллер для управления парковкой
  */
 @RestController
-@RequestMapping("/parkservice")
-public class ParkserviceController {
+@RequestMapping("/client")
+public class ClientController {
 
     @Autowired
     private ClientRepository clientRepository;
