@@ -7,20 +7,17 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 /**
- * <pre>
- * @desc: Парковочные места
- * </pre>
+ * Сущность - Парковочные места клиентов
  */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "PARKSPACE")
+@Table(name = "parkspace")
 public class ParkspaceEntity{
 
     @Id
-//    @Column(name ="clientid",columnDefinition = "int(100) COMMENT 'Идентификатор клиента'")
-    @Column(name ="clientid")
+    @Column
     private int clientid;
 
     @Column

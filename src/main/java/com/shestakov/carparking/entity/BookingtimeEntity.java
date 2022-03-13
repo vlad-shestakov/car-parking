@@ -4,26 +4,21 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
- * <pre>
- * @desc: Бронирования
- * </pre>
+ * Сущность - Бронирования клиентов
  */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "BOOKINGTIME")
+@Table(name = "bookingtime")
 public class BookingtimeEntity {
 
     @Id
-    @Column(name ="clientid")
+    @Column
     private int clientid;
 
     @Column
