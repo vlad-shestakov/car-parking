@@ -1,4 +1,4 @@
-package com.shestakov.carparking.controller.model;
+package com.shestakov.parkservice.controller.model;
 
 import lombok.Data;
 import java.util.Date;
@@ -7,7 +7,7 @@ import java.util.Date;
  * Данные о загрузке парковки (объект передачи данных DTO)
  */
 @Data
-public class ClientParkingDTO {
+public class ClientDto {
 
     private int clientid;           // Код клиента-машины
     private String licensenumber;   // Номер авто

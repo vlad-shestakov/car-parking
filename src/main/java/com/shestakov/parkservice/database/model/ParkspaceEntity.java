@@ -1,4 +1,4 @@
-package com.shestakov.carparking.database.model;
+package com.shestakov.parkservice.database.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

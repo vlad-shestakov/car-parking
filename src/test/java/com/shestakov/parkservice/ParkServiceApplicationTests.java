@@ -1,4 +1,4 @@
-package com.shestakov.carparking;
+package com.shestakov.parkservice;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -6,13 +6,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @Disabled
 @SpringBootTest
-class CarParkingApplicationTests {
+class ParkServiceApplicationTests {
 
     @Test
     void contextLoads() {
         /*
          * Test clientParking one
-         * http://localhost:8080/clientParking/detail/801
+         * http://localhost:8080/parkservice/detail/801
          *
          *
          * Test Clients all
