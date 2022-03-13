@@ -7,7 +7,7 @@ import java.util.Date;
  * Данные о загрузке парковки (объект передачи данных DTO)
  */
 @Data
-public class ClientDto {
+public class ParkserviceDto {
 
     private int clientid;           // Код клиента-машины
     private String licensenumber;   // Номер авто
