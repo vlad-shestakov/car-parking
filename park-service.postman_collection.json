@@ -1,24 +1,24 @@
 {
 	"info": {
 		"_postman_id": "b21cfc14-1a59-46e9-8102-880b36a202ac",
-		"name": "car-parking",
+		"name": "park-service",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "clientParking- one",
+			"name": "parkservice- one",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/clientParking/detail/801",
+					"raw": "http://localhost:8080/parkservice/detail/801",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"clientParking",
+						"parkservice",
 						"detail",
 						"801"
 					]
@@ -108,7 +108,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/client/10",
+					"raw": "http://localhost:8080/client/801",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -116,7 +116,36 @@
 					"port": "8080",
 					"path": [
 						"client",
-						"10"
+						"801"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "client - edit crp",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"licensenumber\": \"22222\"\n},",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/client/801",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"801"
 					]
 				}
 			},

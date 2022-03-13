@@ -1,4 +1,4 @@
-# Car-parking 
+# parkService
 *Сервис, обрабатывающий загрузку парковки.*
 
 Веб приложение, выполнено на Spring boot, с использованием библиотеки MapStruct,
@@ -33,13 +33,16 @@
 **Результат выполнения задания:**
 1) Исходные коды, проект собираемый через *Maven*.
 2) Скрипты для проверки *Postman* - carparking.postman_collection.json
-3) База данных *H2* в памяти
+3) База данных *H2* хранится в файле (пересоздается каждый раз при запуске)
 4) Сущности БД: *CLIENT, PARKSPACE, BOOKINGTIME*
 5) Структуры данных генерятся из объектной модели
 6) Данные инициализируются из скрипта при каждом запуске \src\main\resources\data.sql
-7) Доступ к сервису *clientParking* по ссылке http://localhost:8080/clientParking
+7) Доступ к сервису *parkservice* по ссылке http://localhost:8080/client
+7) Доступ к альфа-возможностям сервиса по ссылке http://localhost:8080/parkservice
 
 
 **Тестирование:**
 * Через сценарии Postman
-* Запрос  http://localhost:8080/clientParking/detail/801
+* Запросы CRUD  http://localhost:8080/client
+* Запрос  http://localhost:8080/client/801
+* Запрос  http://localhost:8080/parkservice/detail/801
