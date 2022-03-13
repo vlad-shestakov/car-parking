@@ -13,7 +13,7 @@ import org.mapstruct.Mappings;
  * <Маппер полей для управления парковкой
  */
 @Mapper(componentModel = "spring")
-public interface ParkserviceDtoMapper {
+public interface ParkserviceMapper {
     @Mappings({
             @Mapping(source = "client.clientid", target = "clientid"),
             @Mapping(source = "client.licensenumber",target = "licensenumber"),
@@ -25,5 +25,5 @@ public interface ParkserviceDtoMapper {
             @Mapping(source = "bookingtime.payedsum",target = "payedsum"),
             @Mapping(source = "bookingtime.ispaid",target = "ispaid")
     })
-    ParkserviceDto fromParkserviceDTO(ClientEntity client, ParkspaceEntity parkspace, BookingtimeEntity bookingtime);
+    ParkserviceDto fromParkserviceDto(ClientEntity client, ParkspaceEntity parkspace, BookingtimeEntity bookingtime);
 }
