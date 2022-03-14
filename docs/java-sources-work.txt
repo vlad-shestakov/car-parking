@@ -2,12 +2,31 @@ java-sources-work.txt
 
 -- Изученные материалы
 
+
+---------------------------------------------------------
+-- Легенда
+[NR] - Прочитать потом
+[RTFM] - ссылки на официальные руководства
+***** - полезная статья
+
+----------------------------------------------------------
+-- Gradle
+
+-- Сборка Java-проекта с использованием Gradle
+	http://spring-projects.ru/guides/gradle/
+	
+-- H2 database example in Gradle
+	http://makble.com/h2-database-example-in-gradle
+----------------------------------------------------------
+-- CheckStyle [NR]
+
 ---------------------------------------------------------
 -- REST
 
 	POST - Создание (через тело запроса json)
-	POST - Обновление (по id, через параметры запроса)
+	--POST - Обновление (по id, через параметры запроса)
 	PUT - Обновление
+	-- PATCH - Обновление (?)
 	GET
 	DELETE
 
@@ -21,12 +40,64 @@ java-sources-work.txt
 	add spring web
 
 ---------------------------------------------------------
--- Swagger (software)
-	https://en.wikipedia.org/wiki/Swagger_(software)
+-- CLEAN ARCHITECTURE / Чистая архитектура (Роберта К. Мартина) / 
+	https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+
+-- Clean Architecture with Spring Boot
+	https://www.baeldung.com/spring-boot-clean-architecture
 	
+-- Чистая прагматичная архитектура. Мозговой штурм
+	https://habr.com/ru/company/jugru/blog/419179/
+
+
+-- Многоуровневая архитектура в проекте на Java (Часть 1 / 2)
+  https://alexkosarev.name/2018/07/27/n-tier-java-part1/
+  https://alexkosarev.name/2018/07/27/n-tier-java-part2/
+  
+-- Заблуждения Clean Architecture [NR]
+	https://habr.com/ru/company/mobileup/blog/335382/
+
+-- MVP / Различия между MVVM и остальными MV*-паттернами [NR]
+	https://habr.com/ru/company/mobileup/blog/313538/
+	
+-- Clean Architecture Example with Java and Spring Boot
+	https://medium.com/swlh/clean-architecture-java-spring-fea51e26e00
+	https://github.com/soyjuanmalopez/clean-architecture.git
+	
+----------------------------------------------------------
+-- Роберт Марин - «Чистая архитектура»
+	автор пропагандирует идею независимости (или минимизации зависимости) архитектуры приложения от внешних факторов: фреймворков, баз данных и прочих сторонних зависимостей
+
 ---------------------------------------------------------
--- Flyway (software)
-	https://en.wikipedia.org/wiki/Flyway_(software)
+-- ***** Микросервисы с Java - Часть 1
+	Microservices with Java — Part 1
+
+	https://ichi.pro/ru/mikroservisy-s-java-cast-1-270473313076138 и
+
+	https://tiagoamp.medium.com/microservices-with-java-part-1-f5fe79bf43aa
+
+	https://github.com/tiagoamp/microservices-series/tree/ch-01
+
+		
+-- Spring Boot, Spring Data JPA – Rest CRUD API example
+	https://www.bezkoder.com/spring-boot-jpa-crud-rest-api/
+	https://github.com/bezkoder/spring-boot-data-jpa-mysql
+	
+	
+-- Начало разработки веб-приложений с Java и Spring
+  https://alexkosarev.name/2019/07/11/tutorial-java-web-application-with-spring-part1/#more-435
+  https://gitlab.com/akosarev-tutorials-and-howtos/tutorial-java-web-application-with-spring.git
+
+	spring-boot-starter-web
+	spring-boot-starter-thymeleaf
+	spring-boot-starter-test
+
+-- Spring Boot — пример с Postgres и JPA
+	Spring Boot, JPA, REST, Postgresql, JUnit, Mockito, Thymeleaf, Ajax
+	https://www.youtube.com/watch?v=7kremotjzdM
+
+	https://github.com/caligula95/spring_crud
+	
 
 ---------------------------------------------------------
 -- H2 — открытая кроссплатформенная СУБД
@@ -57,54 +128,8 @@ remote
 	https://java-ru-blog.blogspot.com/2020/03/spring-boot-jpa-create-drop-databases.html
 	
 ---------------------------------------------------------
--- Чистая архитектура (Роберта К. Мартина) / The Clean Architecture
-	https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
-
--- Clean Architecture with Spring Boot
-	https://www.baeldung.com/spring-boot-clean-architecture
-	
--- Чистая прагматичная архитектура. Мозговой штурм
-	https://habr.com/ru/company/jugru/blog/419179/
-
-
--- Многоуровневая архитектура в проекте на Java (Часть 1 / 2)
-  https://alexkosarev.name/2018/07/27/n-tier-java-part1/
-  https://alexkosarev.name/2018/07/27/n-tier-java-part2/
-
-----------------------------------------------------------
--- Роберт Марин - «Чистая архитектура»
-	автор пропагандирует идею независимости (или минимизации зависимости) архитектуры приложения от внешних факторов: фреймворков, баз данных и прочих сторонних зависимостей
-
-----------------------------------------------------------
--- CheckStyle
-lom
-
----------------------------------------------------------
--- Начало разработки веб-приложений с Java и Spring
-  https://alexkosarev.name/2019/07/11/tutorial-java-web-application-with-spring-part1/#more-435
-  https://gitlab.com/akosarev-tutorials-and-howtos/tutorial-java-web-application-with-spring.git
-
-	spring-boot-starter-web
-	spring-boot-starter-thymeleaf
-	spring-boot-starter-test
-
--- Spring Boot — пример с Postgres и JPA
-	Spring Boot, JPA, REST, Postgresql, JUnit, Mockito, Thymeleaf, Ajax
-	https://www.youtube.com/watch?v=7kremotjzdM
-
-	https://github.com/caligula95/spring_crud
----------------------------------------------------------
--- ***** Микросервисы с Java - Часть 1
-	Microservices with Java — Part 1
-
-	https://ichi.pro/ru/mikroservisy-s-java-cast-1-270473313076138 и
-
-	https://tiagoamp.medium.com/microservices-with-java-part-1-f5fe79bf43aa
-
-	https://github.com/tiagoamp/microservices-series/tree/ch-01
-
----------------------------------------------------------
--- ENTITIES / domain object / Работа с сущностями 
+-- ENTITIES / DOMAIN object / Работа с сущностями 
+-- Доменный объект
 	https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82
 
 -- Spring Data JPA One To Many Relationship Mapping Example
@@ -114,6 +139,7 @@ lom
 -- Mapping a Single Entity to Multiple Tables in JPA
 	https://www.baeldung.com/jpa-mapping-single-entity-to-multiple-tables
 		
+	
 -- 4. Операции с атрибутами объекта JPA
 	https://russianblogs.com/article/29651057280
 	https://gitee.com/hypier/barry-jpa/tree/master/jpa-section-3
@@ -131,7 +157,6 @@ lom
 	@Column(name = "personName", length = 15, nullable = false)
 	@Temporal(TemporalType.DATE)
 	@Enumerated(EnumType.STRING) / EnumType.ORDINAL
-	
 ---------------------------------------------------------
 -- Объекты значения / Value Object / VO
 
@@ -146,12 +171,14 @@ lom
 -- Lombok 
 
 -- Lombok возвращает величие Java
+	https://habr.com/ru/post/438870/
+	
 	@Data 
 	@Value 		- объект без сеттеров. Неизменяемый
 	@Builder
 	@NonNull
 	@Singular	@Wither 	@Accessors 
-	https://habr.com/ru/post/438870/
+	
 ---------------------------------------------------------
 -- Работа с репозиториями
 -- Difference Between CrudRepository and JPARepository in Java
@@ -164,9 +191,16 @@ lom
 -- Переосмысление DTO в Java [NR]
 	https://habr.com/ru/post/513072/
 	
+-- ***** Mapping JPA Entities into DTOs in Spring Boot Using MapStruct
+-- ***** also Aside: Securing Spring APIs with Auth0 [NR]
+	example
+	https://auth0.com/blog/how-to-automatically-map-jpa-entities-into-dtos-in-spring-boot-using-mapstruct/
+	https://github.com/Tonel/mapstruct-auth0
+	
 ---------------------------------------------------------
 -- MapStruct
 	https://mapstruct.org/
+	
 -- MapStruct 1.4.2.Final Reference Guide [RTFM]
 	https://mapstruct.org/documentation/stable/reference/html/
 
@@ -186,6 +220,7 @@ lom
 -- MapStruct для автоматического сопоставления DTO
 	https://russianblogs.com/article/54181583003/
 	https://github.com/Thinkingcao/SpringBootLearning/tree/master/springboot-mapstruct
+	
 ---------------------------------------------------------
 -- Валидация
 
@@ -237,3 +272,11 @@ And retrieving the Entity:
 	  "surname": "smith"
 	}
 ---------------------------------------------------------
+
+---------------------------------------------------------
+-- Swagger (software)
+	https://en.wikipedia.org/wiki/Swagger_(software)
+	
+---------------------------------------------------------
+-- Flyway (software)
+	https://en.wikipedia.org/wiki/Flyway_(software)

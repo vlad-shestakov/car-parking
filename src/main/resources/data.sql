@@ -1,13 +1,17 @@
 -- Чистим БД
 
-delete from parkspace;
-delete from BOOKINGTIME;
-delete from client;
+delete from parkspace
+  where clientid in (801, 802);
+
+delete from BOOKINGTIME
+  where clientid in (801, 802);
+
+delete from client
+  where clientid in (801, 802);
 
 -- Заполняем данными
 INSERT INTO client (clientid, licensenumber) VALUES (801, '292UM');
 INSERT INTO client (clientid, licensenumber) VALUES (802, '123');
--- INSERT INTO client (clientid, licensenumber) VALUES (803, '292UM');
 
 INSERT INTO parkspace (clientid, parkspacenum) VALUES (801, 1);
 INSERT INTO parkspace (clientid, parkspacenum) VALUES (802, 2);
