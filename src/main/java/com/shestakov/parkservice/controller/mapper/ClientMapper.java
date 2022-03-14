@@ -1,7 +1,7 @@
 package com.shestakov.parkservice.controller.mapper;
 
 
-import com.shestakov.parkservice.controller.model.ClientDto;
+import com.shestakov.parkservice.controller.model.*;
 import com.shestakov.parkservice.database.model.ClientEntity;
 import org.mapstruct.Mapper;
 
@@ -11,18 +11,19 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring")
 public interface ClientMapper {
 
+//  Example mapping
 //    @Mappings({
 //            @Mapping(source = "client.clientid", target = "clientid"),
 //            @Mapping(source = "client.licensenumber",target = "licensenumber")
-//            @Mapping(source = "parkspace.parkspacenum", target = "parkspacenum"),
-//            @Mapping(source = "bookingtime.datestart",target = "datestart"),
-//            @Mapping(source = "bookingtime.datefinish",target = "datefinish"),
-//            @Mapping(source = "bookingtime.renttariff",target = "renttariff"),
-//            @Mapping(source = "bookingtime.rentsum",target = "rentsum"),
-//            @Mapping(source = "bookingtime.payedsum",target = "payedsum"),
-//            @Mapping(source = "bookingtime.ispaid",target = "ispaid")
 //    })
-    ClientDto fromClientDto(ClientEntity client);
+    ClientEntity fromClientPostRqDto(ClientPostRqDto clientPostRqDto);
+    ClientEntity fromClientRostRsDto(ClientPostRsDto clientPostRsDto);
+    ClientEntity fromClientPutRqDto(ClientPutRqDto clientPutRqDto);
 
-//    ClientResponseDto fromClientResponseDto(ClientEntity client);
+    ClientGetDto toClientGetDto(ClientEntity client);
+    ClientPostRsDto toClientPostRsDto(ClientEntity client);
+    ClientPostRqDto toClientPostRqDto(ClientEntity client);
+    ClientPutRsDto toClientPutRsDto(ClientEntity client);
+
+
 }

@@ -5,10 +5,10 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * Данные о загрузке парковки (объект передачи данных DTO)
+ * Данные о загрузке парковки ЧТЕНИЕ
  */
 @Data
-public class ClientDto {
+public class ClientGetDto {
 
     private int clientid;           // Код клиента-машины
     private String licensenumber;   // Номер авто
