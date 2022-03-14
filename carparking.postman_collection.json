@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "b21cfc14-1a59-46e9-8102-880b36a202ac",
+		"name": "carparking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "carparking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carparking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carparking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "carparking - one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carparking/801",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carparking",
+						"801"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "carparking - new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"licensenumber\": \"999new123\",\n    \"parkspacenum\": 5,\n    \"datestart\": null,\n    \"renttariff\": 1\n},",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/carparking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carparking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "carparking - edit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"clientid\": 801,\n    \"licensenumber\": \"999new1234\",\n    \"parkspacenum\": 9,\n    \"datestart\": null,\n    \"datefinish\": null,\n    \"renttariff\": 1,\n    \"rentsum\": 0.0,\n    \"payedsum\": 0.0,\n    \"ispaid\": 0\n},",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/carparking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carparking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "carparking",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carparking/801",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carparking",
+						"801"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
