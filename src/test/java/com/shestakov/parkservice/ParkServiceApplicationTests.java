@@ -11,29 +11,13 @@ class ParkServiceApplicationTests {
     @Test
     void contextLoads() {
         /*
-         * Test clientParking one
-         * http://localhost:8080/parkservice/detail/801
+         * Test Carparking one
+         * http://localhost:8080/carparking/801
          *
          *
-         * Test Clients all
-         * http://localhost:8080/client
+         * Test Carparking all
+         * http://localhost:8080/carparking
          *
-         * Test Clients one
-         * http://localhost:8080/client/801
-         *
-         *
-         * Test parkspace all
-         * http://localhost:8080/parkspace"
-         *
-         * Test parkspace one
-         * http://localhost:8080/parkspace/801"
-         *
-         *
-         * Test bookingtime all
-         * http://localhost:8080/bookingtime"
-         *
-         * Test bookingtime one
-         * http://localhost:8080/bookingtime/801"
          * */
     }
 
