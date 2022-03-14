@@ -33,16 +33,18 @@
 **Результат выполнения задания:**
 1) Исходные коды, проект собираемый через *Maven*.
 2) Скрипты для проверки *Postman* - carparking.postman_collection.json
-3) База данных *H2* хранится в файле (пересоздается каждый раз при запуске)
+3) База данных *H2* хранится в файле
 4) Сущности БД: *CLIENT, PARKSPACE, BOOKINGTIME*
 5) Структуры данных генерятся из объектной модели
-6) Данные инициализируются из скрипта при каждом запуске \src\main\resources\data.sql
-7) Доступ к сервису *parkservice* по ссылке http://localhost:8080/client
-7) Доступ к альфа-возможностям сервиса по ссылке http://localhost:8080/parkservice
-
-
+6) Список полей JSON для вывода зависит от типа отправляемого сообщения
+7) Данные для тестов инициализируются из скрипта при каждом запуске \src\main\resources\data.sql
+8) Доступ к сервису *carparking* по ссылке http://localhost:8080/carparking
+  
 **Тестирование:**
-* Через сценарии Postman
-* Запросы CRUD  http://localhost:8080/client
-* Запрос  http://localhost:8080/client/801
-* Запрос  http://localhost:8080/parkservice/detail/801
+* Через сценарии Postman 
+* Запросы CRUD  http://localhost:8080/carparking
+* Запрос  http://localhost:8080/carparking/801
+
+**TODO:**
+* Требуется доработка сервиса через бизнес-сущность - interactor
+* Требуется добавить валидацию полей
