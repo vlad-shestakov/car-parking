@@ -1,6 +1,6 @@
 package com.shestakov.parkservice.controller;
 
-import com.shestakov.parkservice.controller.mapper.ParkserviceDtoMapper;
+import com.shestakov.parkservice.controller.mapper.ParkserviceMapper;
 import com.shestakov.parkservice.controller.model.ParkserviceDto;
 import com.shestakov.parkservice.database.model.BookingtimeEntity;
 import com.shestakov.parkservice.database.model.ClientEntity;
@@ -33,7 +33,7 @@ public class ParkserviceController {
     private BookingtimeRepository bookingtimeRepository;
 
     @Autowired
-    private ParkserviceDtoMapper parkserviceDtoMapper;
+    private ParkserviceMapper parkserviceMapper;
 
     @RequestMapping(value = "/detail/{clientid}", method = RequestMethod.GET)
     public ParkserviceDto details(@PathVariable(value = "clientid") Integer clientid) {
@@ -48,7 +48,8 @@ public class ParkserviceController {
         BookingtimeEntity bookingtimeInfo = optionalB.isPresent() ? optionalB.get() : null;
 
 
-        return parkserviceDtoMapper.fromClientParkingDTO(clientInfo, parkspaceInfo, bookingtimeInfo);
+        return parkserviceMapper.fromParkserviceDto(clientInfo, parkspaceInfo, bookingtimeInfo);
     }
+
 }
 

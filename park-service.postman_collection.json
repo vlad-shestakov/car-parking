@@ -27,6 +27,26 @@
 			"response": []
 		},
 		{
+			"name": "parkservice- one Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/client/801",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"801"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "client - all",
 			"request": {
 				"method": "GET",
@@ -72,7 +92,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"licensenumber\": \"999new123\",\n    \"parkspacenum\": 5,\n    \"datestart\": null,\n    \"datefinish\": null,\n    \"renttariff\": 1,\n    \"rentsum\": 0.0,\n    \"payedsum\": 0.0,\n    \"ispaid\": 0\n},",
+					"raw": "{\n    \"licensenumber\": \"999new123\",\n    \"parkspacenum\": 5,\n    \"datestart\": null,\n    \"renttariff\": 1\n},",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -100,7 +120,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"licensenumber\": \"999new1234\",\n    \"parkspacenum\": 10,\n    \"datestart\": null,\n    \"datefinish\": null,\n    \"renttariff\": 1,\n    \"rentsum\": 0.0,\n    \"payedsum\": 0.0,\n    \"ispaid\": 0\n},",
+					"raw": "{\n    \"clientid\": 801,\n    \"licensenumber\": \"999new1234\",\n    \"parkspacenum\": 9,\n    \"datestart\": null,\n    \"datefinish\": null,\n    \"renttariff\": 1,\n    \"rentsum\": 0.0,\n    \"payedsum\": 0.0,\n    \"ispaid\": 0\n},",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -108,44 +128,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/client/801",
+					"raw": "http://localhost:8080/client",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"client",
-						"801"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "client - edit crp",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"licensenumber\": \"22222\"\n},",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/client/801",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"client",
-						"801"
+						"client"
 					]
 				}
 			},
@@ -157,7 +147,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/client/3",
+					"raw": "http://localhost:8080/client/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -165,244 +155,7 @@
 					"port": "8080",
 					"path": [
 						"client",
-						"3"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "parkspace",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/parkspace",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"parkspace"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "parkspace - one",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/parkspace/801",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"parkspace",
-						"801"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "parkspace",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"clientid\": 2\n},",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8091/api/parkspace",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"api",
-						"parkspace"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "parkspace",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"parkspaceid\": 4,\n    \"clientid\": 3\n},",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8091/api/parkspace/4",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"api",
-						"parkspace",
-						"4"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "parkspace",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8091/api/parkspace/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"api",
-						"parkspace",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "bookingtime",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/bookingtime",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"bookingtime"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "bookingtime - one",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/bookingtime/801",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"bookingtime",
-						"801"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "bookingtime",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"clientid\": 2,\n    \"datestart\": \"2021-03-12T18:00:00.511Z\",\n    \"datefinish\": \"2021-03-12T18:25:43.511Z\",\n    \"renttariff\": 1,\n    \"rentsum\": 100,\n    \"payedsum\": 100,\n    \"ispaid\": 1\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8091/api/bookingtime",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"api",
-						"bookingtime"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "bookingtime",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"bookingtimeid\": 1,\n    \"clientid\": 1,\n    \"datestart\": \"2021-03-12T18:00:00.511Z\",\n    \"datefinish\": \"2021-03-12T18:25:43.511Z\",\n    \"renttariff\": 1,\n    \"rentsum\": 100,\n    \"payedsum\": 100,\n    \"ispaid\": 1\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8091/api/bookingtime",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"api",
-						"bookingtime"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "bookingtime",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8091/api/bookingtime/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"api",
-						"bookingtime",
-						"1"
+						"2"
 					]
 				}
 			},

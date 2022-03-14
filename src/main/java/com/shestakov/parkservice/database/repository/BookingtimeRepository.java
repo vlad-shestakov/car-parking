@@ -7,6 +7,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 /**
  * Репозиторий бронирований
  */
-@RepositoryRestResource(collectionResourceRel = "bookingtime", path = "bookingtime")
+//@RepositoryRestResource(collectionResourceRel = "bookingtime", path = "bookingtime")
 public interface BookingtimeRepository extends JpaRepository<BookingtimeEntity, Integer> {
 }
