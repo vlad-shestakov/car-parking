@@ -13,13 +13,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.validation.Valid;
 
 /**
  * Контроллер для управления парковкой
  */
 @RestController
-@RequestMapping("/client")
+@RequestMapping("/carparking")
 public class ClientController {
 
     @Autowired
@@ -28,23 +31,21 @@ public class ClientController {
     @Autowired
     private ClientMapper clientMapper;
 
-//    @Value
-//    private static class ClientsResponse {
-//        private List<ClientEntity> clients;
-//    }
-//
-//    @GetMapping
-//    public StoreResponse stores() {
-//        return new ClientsResponse(clientRepository.findAll());
-//        ClientEntity clientInfo = clientRepository.findById(clientid).get();
-//        return clientMapper.fromClientResponseDto(clientInfo);
-//    }
+    @GetMapping
+    public List<ClientGetDto> selectall() {
+        List<ClientGetDto> list = new ArrayList<ClientGetDto>();
+
+        clientRepository.findAll().iterator().forEachRemaining(t -> list.add(clientMapper.toClientGetDto(t)));
+//        clientRepository.findAll().forEach( p -> list.add(clientMapper.toClientGetDto(p)));
+
+        return list;
+    }
+
 
     @GetMapping(value = "/{clientid}")
     public ResponseEntity<ClientGetDto> select(@PathVariable(value = "clientid") Integer clientid) {
 
         ClientEntity clientInfo = clientRepository.findById(clientid).get();
-        // return clientMapper.fromClientResponseDto(clientInfo);
         return new ResponseEntity<>(
                 clientMapper.toClientGetDto(clientInfo),
                 HttpStatus.OK
