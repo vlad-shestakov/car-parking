@@ -1,11 +1,7 @@
 package com.shestakov.parkservice.controller;
 
 import com.shestakov.parkservice.controller.mapper.ClientMapper;
-import com.shestakov.parkservice.controller.model.ClientGetDto;
-import com.shestakov.parkservice.controller.model.ClientPostRqDto;
-import com.shestakov.parkservice.controller.model.ClientPostRsDto;
-import com.shestakov.parkservice.controller.model.ClientPutRqDto;
-import com.shestakov.parkservice.controller.model.ClientPutRsDto;
+import com.shestakov.parkservice.controller.model.*;
 import com.shestakov.parkservice.database.model.ClientEntity;
 import com.shestakov.parkservice.database.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,7 +49,7 @@ public class ClientController {
     }
 
     @PostMapping()
-    public ResponseEntity<ClientPostRsDto> insert(@Valid @RequestBody ClientPostRqDto clientPostRqDto) {
+    public ResponseEntity<ClientPostRsDto> update(@Valid @RequestBody ClientPostRqDto clientPostRqDto) {
 
         ClientEntity clientInfo = clientMapper.fromClientPostRqDto(clientPostRqDto);
         clientRepository.save(clientInfo);
@@ -64,7 +60,7 @@ public class ClientController {
     }
 
     @PutMapping
-    public ResponseEntity<ClientPutRsDto> update(@Valid @RequestBody ClientPutRqDto clientPutRqDto) {
+    public ResponseEntity<ClientPutRsDto> insert(@Valid @RequestBody ClientPutRqDto clientPutRqDto) {
 
         ClientEntity clientInfo = clientMapper.fromClientPutRqDto(clientPutRqDto);
         clientRepository.save(clientInfo);
