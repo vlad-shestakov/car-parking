@@ -9,19 +9,18 @@ import org.mapstruct.Mapper;
  * <Маппер полей для управления парковкой
  */
 @Mapper(componentModel = "spring")
-public interface ClientMapper {
+public interface ClientServiceMapper {
 
 //  Example mapping
 //    @Mappings({
 //            @Mapping(source = "client.clientid", target = "clientid"),
 //            @Mapping(source = "client.licensenumber",target = "licensenumber")
 //    })
-    ClientEntity fromClientPostRqDto(ClientPostRqDto clientPostRqDto);
-    ClientEntity fromClientPutRqDto(ClientPutRqDto clientPutRqDto);
-
-    ClientGetDto toClientGetDto(ClientEntity client);
-    ClientPostRsDto toClientPostRsDto(ClientEntity client);
-    ClientPutRsDto toClientPutRsDto(ClientEntity client);
+    ClientResponse map(ClientEntity client);
+    ClientPutResponse mapPut(ClientEntity client);
+    ClientPostResponse mapPost(ClientEntity client);
+    ClientEntity map(ClientPutRequest clientPutRequest);
+    ClientEntity map(ClientPostRequest clientPostRequest);
 
 
 }

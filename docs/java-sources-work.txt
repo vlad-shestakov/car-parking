@@ -38,7 +38,12 @@ java-sources-work.txt
 -- SPRING BOOT ШАБЛОНИЗАТОР
 	https://start.spring.io/
 	add spring web
+		
+	-- start.spring.io
+	https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.6.4&packaging=jar&jvmVersion=11&groupId=com.shestakov&artifactId=car-parking&name=car-parking&description=Demo%20project%20for%20Spring%20Boot&packageName=com.shestakov.car-parking&dependencies=web,h2,data-rest,data-jpa,lombok
 
+
+---------------------------------------------------------
 ---------------------------------------------------------
 -- CLEAN ARCHITECTURE / Чистая архитектура (Роберта К. Мартина) / 
 	https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
